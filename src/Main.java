@@ -1,8 +1,9 @@
+import bordgame.Bord;
 import bordgame.Position;
 
 public class Main {
     public static void main(String[] args) {
-        Position pos = new Position(3, 5);
-        System.out.println(pos);
+        Bord bord = new Bord(8, 8);
+        System.out.println(bord);
     }
 }
