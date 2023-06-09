@@ -24,5 +24,6 @@ public class ChessMach {
     private void initialSetup(){
         bord.placePiece(new Rook(bord, Color.WHITE), new Position(2, 1));
         bord.placePiece(new King(bord, Color.BLACK), new Position(0, 4));
+        bord.placePiece(new King(bord, Color.WHITE), new Position(7, 4));
     }
 }
