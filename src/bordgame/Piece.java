@@ -1,16 +1,18 @@
 package bordgame;
 
+import bordgame.Board;
+
 public  class Piece {
     protected Position position;
-    private Bord bord;
+    private Board board;
 
-    public Piece(Bord bord) {
-        this.bord = bord;
+    public Piece(Board board) {
+        this.board = board;
     }
 
-    protected Bord getBord() {
-        return bord;
-    }
+   protected Board getBoard(){
+        return board;
+   }
 
 
 

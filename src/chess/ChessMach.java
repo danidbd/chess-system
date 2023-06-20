@@ -1,32 +1,34 @@
 package chess;
 
-import bordgame.Bord;
+
+import bordgame.Board;
 import bordgame.Position;
 import chess.pieces.King;
 import chess.pieces.Rook;
 
+
 public class ChessMach {
-    private Bord bord;
+    private Board board;
 
     public ChessMach(){
-        bord = new Bord(8, 8);
+        board = new Board(8, 8);
         initialSetup();
     }
     public ChessPiece[][] getPieces(){
-        ChessPiece[][] mat = new ChessPiece[bord.getRow()][bord.getColumns()];
-        for (int i=0; i<bord.getRow(); i++ ){
-            for (int j=0; j< bord.getColumns();j++){
-                mat[i][j] = (ChessPiece) bord.piece(i, j);
+        ChessPiece[][] mat = new ChessPiece[board.getRow()][board.getColumns()];
+        for (int i=0; i<board.getRow(); i++ ){
+            for (int j=0; j< board.getColumns();j++){
+                mat[i][j] = (ChessPiece) board.piece(i, j);
             }
         }
         return mat;
     }
     private void placeNewPiece(char column, int row, ChessPiece piece){
-        bord.placePiece(piece, new ChessPositin(column, row).toPosition());
+        board.placePiece(piece, new ChessPositin(column, row).toPosition());
     }
     private void initialSetup(){
-        placeNewPiece('b', 6, new Rook(bord, Color.WHITE));
-        placeNewPiece('e', 8, new King(bord, Color.BLACK));
-        placeNewPiece('e', 1, new King(bord, Color.WHITE));
+        placeNewPiece('b', 6, new Rook(board, Color.WHITE));
+        placeNewPiece('e', 8, new King(board, Color.BLACK));
+        placeNewPiece('e', 1, new King(board, Color.WHITE));
     }
 }

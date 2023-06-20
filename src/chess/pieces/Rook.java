@@ -1,12 +1,13 @@
 package chess.pieces;
 
-import bordgame.Bord;
+import bordgame.Board;
+import bordgame.Board;
 import chess.ChessPiece;
 import chess.Color;
 
 public class Rook extends ChessPiece {
-    public Rook(Bord bord, Color color) {
-        super(bord, color);
+    public Rook(Board board, Color color) {
+        super(board, color);
     }
 
     @Override

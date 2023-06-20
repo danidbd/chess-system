@@ -1,13 +1,13 @@
 package chess;
 
-import bordgame.Bord;
+import bordgame.Board;
 import bordgame.Piece;
 
 public class ChessPiece extends Piece {
     private Color color;
 
-    public ChessPiece(Bord bord, Color color) {
-        super(bord);
+    public ChessPiece(Board board, Color color) {
+        super(board);
         this.color = color;
     }
 
