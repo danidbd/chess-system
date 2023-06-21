@@ -1,9 +1,9 @@
 package chess;
 
 
-import bordgame.Board;
-import bordgame.Piece;
-import bordgame.Position;
+import boardgame.Board;
+import boardgame.Piece;
+import boardgame.Position;
 import chess.pieces.King;
 import chess.pieces.Rook;
 
@@ -29,6 +29,7 @@ public class ChessMach {
         Position source = sourcePosition.toPosition();
         Position target = targetPosition.toPosition();
         validateSourcePosition(source);
+        validateTargetPosition(source, target);
         Piece capturedPiece = makeMove(source, target);
         return (ChessPiece) capturedPiece;
     }
@@ -41,7 +42,11 @@ public class ChessMach {
         }
     }
 
-
+    private void validateTargetPosition (Position source, Position target){
+        if (!board.piece(source).possibleMove(target)){
+            throw new ChessException("the chose pice can't move to target position");
+        }
+    }
 
     private Piece makeMove(Position source, Position target){
         Piece p = board.removePiece(source);

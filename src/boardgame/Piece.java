@@ -1,6 +1,4 @@
-package bordgame;
-
-import bordgame.Board;
+package boardgame;
 
 public abstract   class Piece {
     protected Position position;

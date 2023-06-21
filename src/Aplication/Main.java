@@ -1,6 +1,5 @@
 package Aplication;
 
-import bordgame.Board;
 import chess.ChessException;
 import chess.ChessMach;
 import chess.ChessPiece;

@@ -1,7 +1,6 @@
 package chess.pieces;
 
-import bordgame.Board;
-import bordgame.Board;
+import boardgame.Board;
 import chess.ChessPiece;
 import chess.Color;
 
