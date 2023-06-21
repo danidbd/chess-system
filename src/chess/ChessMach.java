@@ -36,6 +36,9 @@ public class ChessMach {
         if (!board.thereIsAPiece(position)) {
             throw new ChessException("There is no piece at the source position");
         }
+        if (!board.piece(position).isThereAnyPossiblrMove()){
+            throw new ChessException("There is no possible moves for the chosen piece");
+        }
     }
 
 
