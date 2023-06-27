@@ -17,8 +17,8 @@ public class Main {
         ChessMach chessMach = new ChessMach();
         List<ChessPiece> captured = new ArrayList<>();
 
-        while (true) {
-          // try
+        while (! chessMach.getCheckMate()) {
+           try{
                 UI.clearScreen();
 
                 UI.printMatch(chessMach, captured);
@@ -39,14 +39,16 @@ public class Main {
                     captured.add(capturedPiece);
                 }
             }
-            //catch (ChessException e) {
-               // System.out.println(e.getMessage());
-              //  s.nextLine();
-            //}
-           // catch (InputMismatchException e) {
-              //  System.out.println(e.getMessage());
-                //s.nextLine();
-           // }
-       // }
+            catch (ChessException e) {
+                    System.out.println(e.getMessage());
+               s.nextLine();
+            }
+            catch (InputMismatchException e) {
+               System.out.println(e.getMessage());
+                s.nextLine();
+            }
+        }
+        UI.clearScreen();
+        UI.printMatch(chessMach,captured);
     }
 }
